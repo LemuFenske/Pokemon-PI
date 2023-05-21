@@ -1,0 +1,21 @@
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('C:\Users\Usuario\Desktop\PI-Pokemon-main\client\src\views\Landing\12145.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Usar la altura completa de la ventana */
+    width: 100%; /* Usar el ancho completo del contenedor */
+  }
+
+  .buttomLogin {
+    font-size: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color:  #f7b633;
+    border: 2px solid #f1a307;
+    border-radius: 5px;
+    color: #444f55;
+  }

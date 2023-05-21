@@ -1,0 +1,29 @@
+.pagsControl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.page {
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    padding:0px;
+    margin-top: 4px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.prevYPost {
+    color: rgb(29, 29, 29);
+    padding: 2px;
+    margin: 5px;
+}
+
+.prevYPostButtoms {
+    background-color: black;
+    color: aliceblue;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+}
+
