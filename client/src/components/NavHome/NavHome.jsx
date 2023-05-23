@@ -8,20 +8,6 @@ const NavHome = ({onSearch})  => {
         <div className={style.NavHomeStyle}>
             <SearchBar onSearch={onSearch} />
             <Link to='/form'><button className={style.create}>Crear Pokemon</button></Link>
-            <select>
-                <option  value="">Normal</option>
-                <option  value="">Fire</option>
-            </select>
-            <select>
-                <option  value="">API</option>
-                <option  value="">BDD</option>
-            </select>
-            <select>
-                <option  value="">A - Z</option>
-                <option  value="">Z - A</option>
-                <option  value="">+Att -Att</option>
-                <option  value="">-Att +Att</option>
-            </select>
         </div>
     )
 }

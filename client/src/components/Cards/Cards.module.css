@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap; 
+    margin-bottom: 50px;
     /* este es para que siga abajo cuando completa un nivel */
     /* background-color: rgb(0, 0, 80); */
 }
@@ -25,4 +26,64 @@
     padding: 10px;
     width: 100%;
     color: aliceblue;
+}
+.pagsControl {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(63, 63, 63, 0.5);
+    height: 40px;
+}
+
+.page {
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    padding: 2px;
+
+    margin-left: 6px;
+    margin-right: 6px;
+    align-items: center;
+}
+
+.prevYPost {
+    color: rgb(29, 29, 29);
+    padding: 2px;
+    margin: 4px;
+}
+
+.prevYPostButtoms {
+    background-color: black;
+    color: aliceblue;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.loader {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.filters {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(63, 63, 63, 0.5);
+    height: 40px;
 }

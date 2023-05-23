@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import NavForm from "../../components/NavForm/NavForm";
+import style from './Form.module.css'
 
 
 const Form = () => {
@@ -63,43 +64,45 @@ const Form = () => {
     return (
         <div>
             <NavForm/>
-            <form onSubmit={handleSubmit}>
-            <div>
+            <form onSubmit={handleSubmit} >
+            <div className={style.form}>
+                <h2 className={style.formTitle}>Crear Pokemon:</h2>
+            <div className={style.infoForm}>
                 <label>Nombre: </label>
                 <input type="text" value={form.name} onChange={handleChange} name='name'/>
                 {errors.name && <span>{errors.name}</span>}
             </div>
-            <div>
+            <div className={style.infoForm}>
                 <label>Imagen: </label>
                 <input type="text" value={form.image} onChange={handleChange} name='image'/>
             </div>
-            <div>
+            <div className={style.infoForm}>
                 <label>Vida: </label>
                 <input type="text" value={form.hp} onChange={handleChange} name='hp'/>
             </div>
-            <div>
+            <div className={style.infoForm}>
                 <label>Ataque: </label>
                 <input type="text" value={form.attack} onChange={handleChange} name='attack'/>
             </div>
-            <div>
+            <div className={style.infoForm}>
                 <label>Defensa: </label>
                 <input type="text" value={form.defense} onChange={handleChange} name='defense'/>
             </div>
-            <div>
+            <div className={style.infoForm}>
                 <label>Velocidad: </label>
                 <input type="text" value={form.speed} onChange={handleChange} name='speed'/>
             </div>
-            <div>
+            <div className={style.infoForm}>
                 <label>Altura: </label>
                 <input type="text" value={form.height} onChange={handleChange} name='height'/>
             </div>
-            <div>
+            <div className={style.infoForm}>
                 <label>Peso: </label>
                 <input type="text" value={form.weight} onChange={handleChange} name='weight'/>
             </div>
-            <div>
+            <div  className={style.selectForm}>
                 <label>Tipos: </label>
-                <select multiple value={form.types} onChange={handleChange} name="types">
+                <select value={form.types} onChange={handleChange} name="types" className={style.selectForms}>
                 {types.map((type) => (
                 <option key={type.id} value={type.id}>
                 {type.name}
@@ -107,7 +110,8 @@ const Form = () => {
                 ))}
                 </select>
             </div>
-            <button type="submit">Crear Pokemon</button>
+            <button type="submit" className={style.buttonCreate}>Crear Pokemon</button>
+            </div>
             </form>
         </div>
     )

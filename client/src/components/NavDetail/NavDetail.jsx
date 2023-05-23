@@ -4,7 +4,7 @@ import style from './NavDetail.module.css'
 const NavDetail = ()  => {
     return (
         <div className={style.NavDetailStyle}>
-            <Link to='/home'><button>Home</button></Link>
+            <Link to='/home'><button className={style.home}>Home</button></Link>
         </div>
     )
 }

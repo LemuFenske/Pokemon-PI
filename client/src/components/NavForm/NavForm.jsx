@@ -4,7 +4,7 @@ import style from './NavForm.module.css'
 const NavForm = ()  => {
     return (
         <div className={style.NavFormStyle}>
-            <Link to='/home'><button>Home</button></Link>
+            <Link to='/home'><button className={style.home}>Home</button></Link>
         </div>
     )
 }
