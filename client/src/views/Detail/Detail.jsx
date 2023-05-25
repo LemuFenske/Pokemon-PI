@@ -14,6 +14,8 @@ const Detail = () => {
 
     useEffect(() => {
         dispatch(getPokemon(id))
+
+
       }, []);
      
 

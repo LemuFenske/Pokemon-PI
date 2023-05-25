@@ -1,13 +1,6 @@
 const {Pokemon, Type} = require('../db')
+const {pokemonCreator} = require ('./utils/functions')
 
-
-const pokemonCreator = async (pokemon) => {
-    const newPokemon = await Pokemon.create(pokemon)
-    const {types} = pokemon;
-    newPokemon.addType(types)
-    return newPokemon;
-
-}
 
 
 const createPokemon = async (req, res)=> {

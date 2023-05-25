@@ -26,13 +26,13 @@ const reducer = (state = initialState, {type, payload}) => {
           
             let filteredPokemons;
             if (payload === 'API') {
-              // Filtrar los pokemons que vienen de la API (ID es un número)
+
               filteredPokemons = state.pokemons.filter(pokemon => typeof pokemon.id === 'number');
             } else if (payload === 'BDD') {
-              // Filtrar los pokemons que vienen de la base de datos (ID es un UUID)
+
               filteredPokemons = state.pokemons.filter(pokemon => typeof pokemon.id === 'string');
             } else {
-              // En caso de que payload no sea 'API' ni 'BDD', retornar el estado actual sin filtrar
+
               return state;
             }
           
@@ -53,19 +53,19 @@ const reducer = (state = initialState, {type, payload}) => {
           
             let sortedPokemons;
             if (payload === 'A') {
-              // Ordenar alfabéticamente de A a Z por nombre
+
               sortedPokemons = [...state.pokemons].sort((a, b) => a.name.localeCompare(b.name));
             } else if (payload === 'Z') {
-              // Ordenar alfabéticamente de Z a A por nombre
+
               sortedPokemons = [...state.pokemons].sort((a, b) => b.name.localeCompare(a.name));
             } else if (payload === 'moreAttack') {
-              // Ordenar por mayor a menor ataque
+
               sortedPokemons = [...state.pokemons].sort((a, b) => b.attack - a.attack);
             } else if (payload === 'lessAttack') {
-              // Ordenar por menor a mayor ataque
+
               sortedPokemons = [...state.pokemons].sort((a, b) => a.attack - b.attack);
             } else {
-              // En caso de que payload no coincida con ninguna opción, retornar el estado actual sin ordenar
+
               return state;
             }
           

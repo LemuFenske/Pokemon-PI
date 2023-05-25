@@ -1,24 +1,11 @@
-const axios = require ('axios')
-const URL = "https://pokeapi.co/api/v2/type"
 const {Type} = require('../db')
+const {getAllTypes} = require('./utils/functions')
 
-
-const getAllTypes = async () => {
-    const {data} = await axios(URL)
-    return data.results
-}
-
-// const typeCreator = async (name, id) => {
-//     const newType = await Type.create({name, id})
-//     return newType;
-// }
 
 
 const getTypes = async (req, res) => {
     try {
       const types = await getAllTypes();
-  
-      // Verificar si los tipos ya existen en la base de datos
       for (const type of types) {
         await Type.findOrCreate({
           where: { name: type.name },
@@ -34,11 +21,3 @@ const getTypes = async (req, res) => {
   };
   
   module.exports = getTypes;
-
-  
-  
-  
-  
-  
-  
-  

@@ -28,7 +28,7 @@ function App() {
       {location.pathname === '/home' && <NavHome onSearch={onSearch} />}
       <Routes>
         <Route path = '/' element = {<Landing/>}/>
-        <Route path = '/home' element = {<Home pokemon={pokemon}/>} />
+        <Route path = '/home' element = {<Home pokemon={pokemon} setPokemon={setPokemon}/>} />
         <Route path = '/form' element = {<Form/>}/>
         <Route path = '/detail/:id' element = {<Detail/>}/>
       </Routes>
